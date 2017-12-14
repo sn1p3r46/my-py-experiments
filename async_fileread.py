@@ -39,7 +39,7 @@ async def async_consume(queue):
 async def main(executor):
 	queue = asyncio.Queue(3)
 	consumer = asyncio.ensure_future(async_consume(queue))
-	await async_read(executor, "test.file", 3, queue)
+	await async_read(executor, "data/test.file", 3, queue)
 	await queue.join()
 	consumer.cancel()
 
