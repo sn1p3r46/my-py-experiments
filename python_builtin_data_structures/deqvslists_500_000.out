@@ -1,0 +1,15 @@
+'arr_pop'  54.67 ms
+'que_pop'  42.11 ms
+'arr_pop0'  60969.92 ms
+'que_popleft'  37.93 ms
+'arr_pop_n_push'  154448.35 ms
+'que_pop_n_push'  97.02 ms
+'que_rotate'  111.31 ms
+'arr_for'  7.08 ms
+'que_for'  7.23 ms
+'arr_sum'  4.66 ms
+'deq_sum'  5.44 ms
+'arr_index'  20.86 ms
+'que_index'  4761.61 ms
+'arr_insertion'  198872.34 ms
+'que_insertion'  179740.83 ms
