@@ -25,18 +25,9 @@ def read_chunker_gen(chunk_size):
 
 if __name__ == "__main__":
 
-    read_chunker_gen(5000000)
-    read_chunker_gen(2000000)
-    read_chunker_gen(1000000)
-    read_chunker_gen(500000)
-    read_chunker_gen(250000)
-    read_chunker_gen(125000)
-    read_chunker_gen(75000)
-    read_chunker_gen(20000)
-    read_chunker_gen(10000)
-    read_chunker_gen(50000)
-    read_chunker_gen(2500)
-    read_chunker_gen(1000)
-    read_chunker_gen(500)
-    read_chunker_gen(100)
-    read_chunker_gen(50)
+    vals = [5000000,2000000,1000000,500000,
+            250000,125000,75000,20000,10000,
+            50000,2500,1000,500,100,50]
+
+    for val in vals:
+        read_chunker_gen(val)
