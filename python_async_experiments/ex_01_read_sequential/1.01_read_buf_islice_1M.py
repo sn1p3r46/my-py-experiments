@@ -1,9 +1,7 @@
 #!/usr/bin/python3.6
 
-import datetime
 import timeHandler
 
-from os.path import basename
 from itertools import islice
 
 f_pathu = "/media/andre/HDD/TkData/sorted/test_file.txt"
@@ -23,9 +21,9 @@ def read_buf_islice(N):
 
 if __name__ == "__main__":
 
-    vals = [5000000,2000000,1000000,500000,
-            250000,125000,75000,20000,10000,
-            5000,2500,1000,500,100,50]
+    vals = [5000000, 2000000, 1000000, 500000,
+            250000, 125000, 75000, 20000, 10000,
+            5000, 2500, 1000, 500, 100, 50]
 
     for val in vals:
         read_buf_islice(val)
