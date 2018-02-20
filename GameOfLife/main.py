@@ -5,11 +5,11 @@ from collections import namedtuple
 ALIVE = '*'
 EMPTY = '-'
 
-Query = namedtuple('Query',('y', 'x'))
+Query = namedtuple('Query', ('y', 'x'))
 Transition = namedtuple('Transition', ('y', 'x', 'state'))
 
 
-def count_neighbors(y,x):
+def count_neighbors(y, x):
 
     n_ = yield Query(y + 1, x)
     ne = yield Query(y + 1, x + 1)
@@ -24,9 +24,9 @@ def count_neighbors(y,x):
     count = 0
 
     for state in neigbour_states:
-        if state ==  ALIVE:
+        if state == ALIVE:
             count + 1
-    
+
     return count
 
 
@@ -39,7 +39,7 @@ def step_cell(y, x):
 
 
 def game_logic(state, neighbors):
-    
+
     if state == ALIVE:
         if neighbors < 2:
             return EMPTY     # Die: Too few
