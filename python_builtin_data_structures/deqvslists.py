@@ -5,6 +5,7 @@ import time
 
 dim = 5_000_000
 
+
 def timeit(method):
 
     def timed(*args, **kw):
@@ -16,8 +17,9 @@ def timeit(method):
             name = kw.get('log_name', method.__name__.upper())
             kw['log_time'][name] = int((te - ts) * 1000)
         else:
-            print ('%r  %2.2f ms' % \
-                    (method.__name__, (te - ts) * 1000))
+            print('%r  %2.2f ms' %
+                  (method.__name__, (te - ts) * 1000))
+
         return result
 
     return timed
@@ -72,6 +74,7 @@ def arr_for(arr):
     for i in arr:
         x = i
 
+
 @timeit
 def que_for(queue):
     for i in queue:
@@ -93,13 +96,13 @@ def que_index(queue):
 @timeit
 def arr_insertion(arr):
     for i in range(len(arr)):
-        arr.insert(i,i)
+        arr.insert(i, i)
 
 
 @timeit
 def que_insertion(queue):
     for i in range(len(queue)):
-        queue.insert(i,i)
+        queue.insert(i, i)
 
 
 @timeit
@@ -113,7 +116,6 @@ def deq_sum(queue):
 
 
 if __name__ == "__main__":
-
 
     my_arr = list(range(dim))
     my_deq = collections.deque(range(dim))
